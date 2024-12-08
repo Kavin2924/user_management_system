@@ -12,19 +12,22 @@
   <body class="bg-dark" id="login">
     <!--Start Login Create-->
     <nav class="navbar navbar-expand navbar-dark bg-secondary static-top"><!--start nav-->
-      <a class="mt-3 " href="<?php echo site_url('user/Signup'); ?>">Register an Account</a>
-      <a class="mt-3 ">User Login</a>
-      <a class="mt-3 " href="<?php echo site_url('Home'); ?>">Back to Home page</a>
+      <a class="mt-3 " href="<?php echo site_url('Home'); ?>">Home</a>&nbsp&nbsp&nbsp
+      <a class="mt-3 " href="<?php echo site_url('user/Signup'); ?>">User Registration</a>&nbsp&nbsp&nbsp   
+      <a class="mt-3 ">User Login</a>&nbsp&nbsp&nbsp
     </nav><!--end nav-->
-    <!--<div class="wrapper">start wrapper-->
-      <!--<div class="content-wrapper">start content-wrapper-->
-        <!--<div class="card-header"> strat card-header-->
-          <!--<a class="mt-3 " href="<?php echo site_url('user/Signup'); ?>">Register an Account</a>
-          <a class="mt-3 ">User Login</a>
-          <a class="mt-3 " href="<?php echo site_url('Home'); ?>">Back to Home page</a>-->
-        <!--</div> end card-header-->
-      <!--</div>end content-wrapper-->
-    <!--</div>end wrapper-->
+    
+    <!---- Success Message ---->
+    <?php if ($this->session->flashdata('success')) { ?>
+    <div id="wrapper"><!--start wrapper-->
+      <div id="content-wrapper"><!--start content-wrapper-->
+        <div class="card-body">   
+          <p style="color:green; font-size:18px;"><?php echo $this->session->flashdata('success'); ?></p>
+        </div>
+      </div><!--end content-wrapper-->
+    </div><!--end wrapper-->
+    <?php } ?>
+    
 
     <div id="wrapper"><!--start wrapper-->
       <div id="content-wrapper"><!--start content-wrapper-->

@@ -11,6 +11,13 @@
 
   <body class="bg-dark">
 
+  <!--start nav-->
+  <nav class="navbar navbar-expand navbar-dark bg-secondary static-top">
+    <a class="mt-3" href="<?php echo site_url('Home'); ?>">Home</a>&nbsp&nbsp&nbsp
+    <a class="mt-3" >Admin Login</a>&nbsp&nbsp&nbsp
+  </nav>
+  <!--end nav-->
+
     <div class="container">
       <div class="card card-login mx-auto mt-5">
         <div class="card-header">Admin Login</div>
@@ -38,7 +45,7 @@
             </div>
    
  <?php echo form_submit(['name'=>'login','value'=>'Login','class'=>'btn btn-primary btn-block']); ?>
-  <a class="d-block small" href="<?php echo site_url('Home'); ?>">Back to Home page</a>
+  <!--<a class="d-block small" href="<?php echo site_url('Home'); ?>">Back to Home page</a>-->
 <?php echo form_close(); ?>
      
         </div>
